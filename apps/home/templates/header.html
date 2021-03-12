@@ -1,0 +1,206 @@
+{% load static %}
+<!-- Main Header-->
+<header class="main-header header-edzen">
+    
+    <!--Header-Upper-->
+    <div class="header-upper">
+        <div class="outer-container clearfix">
+            
+            <div class="pull-left logo-box">
+                <div class="logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'images/logo1.png' %}" width="220px" alt="">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="nav-outer clearfix">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->    	
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                        <ul class="navigation clearfix">
+                            <li class="dropdown has-mega-menu"><a href="#"><span>Курсы <i class="fa fa-arrow-down"></i></span></a>
+                                <div class="mega-menu">
+                                    <!-- Upper Box -->
+                                    <div class="upper-box">
+                                        <div class="page-links-box">
+                                            <a href="course.html" class="link">
+                                                <span class="icon flaticon-bullhorn"></span>Marketing
+                                            </a>
+                                            <a href="course-2.html" class="link">
+                                                <span class="icon flaticon-cyclist"></span>Lifestyle
+                                            </a>
+                                            <a href="course-3.html" class="link">
+                                                <span class="icon flaticon-bar-chart"></span>Business
+                                            </a>
+                                            <a href="course-4.html" class="link">
+                                                <span class="icon flaticon-software"></span>Software
+                                            </a>
+                                            <a href="course-3.html" class="link">
+                                                <span class="icon flaticon-atom"></span>Science
+                                            </a>
+                                            <a href="course.html" class="link">
+                                                <span class="icon flaticon-webpage"></span>IT Management
+                                            </a>
+                                            <a href="course-2.html" class="link">
+                                                <span class="icon flaticon-language"></span>Language
+                                            </a>
+                                            <a href="course-3.html" class="link">
+                                                <span class="icon flaticon-team"></span>Human Resources
+                                            </a>
+                                            <a href="course-4.html" class="link">
+                                                <span class="icon flaticon-healthcare"></span>Health Care
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Lower Box -->
+                                </div>
+                            </li>
+                            <li class="current"><a href="index.html"><span data-hover="Home">Главная</span></a></li>
+                            <li class="dropdown"><a href="#">О нас</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="teacher.html">Teacher</a></li>
+                                    <li><a href="membership.html">Membership</a></li>
+                                    <li><a href="faq.html">Faq</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#">Курсы</a>
+                                <ul>
+                                    <li><a href="course.html">Courses</a></li>
+                                    <li><a href="course-2.html">Courses 02</a></li>
+                                    <li><a href="course-3.html">Courses 03</a></li>
+                                    <li><a href="course-4.html">Courses 04</a></li>
+                                    <li><a href="course-detail.html">Courses Detail</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Условия приёма</a></li>
+                            <li><a href="contact.html">Новости и События</a></li>
+                            <li><a href="contact.html">Галерея</a></li>
+                            <li><a href="contact.html" style="margin-right: 12px;">Контакты</a></li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+                
+                <!-- Main Menu End-->
+                <div class="outer-box clearfix">
+                    
+                    <!-- Social Box -->
+                    <ul class="social-box">
+                        <!-- Nav Btn -->
+                        <li class="nav-btn navSidebar-button">
+                            <span class="icon flaticon-menu-4"></span>
+                        </li>
+                        <!-- Nav Btn -->
+                        <li class="instagram">
+                            <a target="_blank" href="http://instagram.com/" style="font-size: 15px" class="fa fa-instagram"></a>
+                        </li>
+                        <li class="facebook">
+                            <a target="_blank" href="http://facebook.com/" style="font-size: 15px" class="fa fa-facebook-f"></a>
+                        </li>
+                        <li class="twitter">
+                            <a target="_blank" href="http://twitter.com/" style="font-size: 19px" class="fa fa-whatsapp"></a>
+                        </li>	
+                    </ul>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!--End Header Upper-->
+    
+    <!-- Sticky Header  -->
+    <div class="sticky-header">
+        <div class="auto-container clearfix">
+            <!--Logo-->
+            <div class="logo pull-left">
+                <a href="index.html" title=""><img src="images/logo1.png" alt="" width="220px"></a>
+            </div>
+            <!--Right Col-->
+            <div class="pull-right">
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <!--Keep This Empty / Menu will come through Javascript-->
+                </nav>
+                <!-- Main Menu End-->
+                
+            </div>
+        </div>
+    </div>
+    <!-- End Sticky Menu -->
+
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+        
+        <nav class="menu-box">
+            <div class="nav-logo"><a href="index.html"><img src="images/logo1.png" alt="" title=""></a></div>
+            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+        </nav>
+    </div><!-- End Mobile Menu -->
+
+</header>
+<!-- End Main Header -->
+
+<!-- Sidebar Cart Item -->
+<div class="xs-sidebar-group info-group">
+    <div class="xs-overlay xs-bg-black"></div>
+    <div class="xs-sidebar-widget">
+        <div class="sidebar-widget-container">
+            <div class="widget-heading">
+                <a href="#" class="close-side-widget">
+                    X
+                </a>
+            </div>
+            <div class="sidebar-textwidget">
+                
+                <!-- Sidebar Info Content -->
+                <div class="sidebar-info-contents">
+                    <div class="content-inner">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo1.png" alt="" /></a>
+                        </div>
+                        <div class="content-box">
+                            <h2>About Us</h2>
+                            <p class="text">The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime you reach a review point you’ll end up reviewing and negotiating the content itself and not the design.</p>
+                            <a href="#" class="theme-btn btn-style-two"><span class="txt">Consultation</span></a>
+                        </div>
+                        <div class="contact-info">
+                            <h2>Contact Info</h2>
+                            <ul class="list-style-two">
+                                <li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
+                                <li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
+                                <li><span class="icon fa fa-envelope"></span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="610d040300130821060c00080d4f020e0c">[email&#160;protected]</a></li>
+                                <li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
+                            </ul>
+                        </div>
+                        <!-- Social Box -->
+                        <ul class="social-box">
+                            <li class="facebook"><a href="#" class="fa fa-facebook-f"></a></li>
+                            <li class="twitter"><a href="#" class="fa fa-twitter"></a></li>
+                            <li class="linkedin"><a href="#" class="fa fa-linkedin"></a></li>
+                            <li class="instagram"><a href="#" class="fa fa-instagram"></a></li>
+                            <li class="youtube"><a href="#" class="fa fa-youtube"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END sidebar widget item -->
