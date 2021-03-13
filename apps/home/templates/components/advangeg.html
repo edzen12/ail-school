@@ -1,8 +1,8 @@
 <!-- Instructor Section -->
 <section class="instructor-section">
-	<div class="background-layer" style="background-image:url(images/background/1.png)"></div>
-	<div class="background-layer-one" style="background-image:url(images/background/pattern-1.png)"></div>
-	<div class="background-layer-two" style="background-image:url(images/background/pattern-2.png)"></div>
+	<div class="background-layer" style="background-image:url(static/images/background/1.png)"></div>
+	<div class="background-layer-one" style="background-image:url(static/images/background/pattern-1.png)"></div>
+	<div class="background-layer-two" style="background-image:url(static/images/background/pattern-2.png)"></div>
 	<div class="auto-container">
 		<div class="sec-title centered">
 			<h2 style="text-transform: uppercase;">Наши преимущества</h2>
@@ -13,7 +13,7 @@
 			<div class="blocks-column col-lg-12 col-md-12 col-sm-12">
 				<div class="inner-column">
 					<div class="row clearfix">
-						
+						{% for adv in advantage %}
 						<!-- Service Block -->
 						<div class="service-block col-lg-4 col-md-4 col-sm-12">
 							<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
@@ -21,38 +21,11 @@
 								<div class="icon-box">
 									<div class="icon flaticon-verify"></div>
 								</div>
-								<h4><a href="course-detail.html">Trusted content</a></h4>
-								<div class="text">Online learning is as easy and natural as chatting with a group of friends.</div>
+								<div class="text">{{adv.descrip}}</div>
 							</div>
 						</div>
 						<!-- Service Block End -->
-						
-						<!-- Service Block -->
-						<div class="service-block col-lg-4 col-md-4 col-sm-12">
-							<div class="inner-box wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
-								<div class="border-layer"></div>
-								<div class="icon-box">
-									<div class="icon flaticon-heart-box"></div>
-								</div>
-								<h4><a href="course-detail.html">Flexible courses</a></h4>
-								<div class="text">We provide online learning solutions for secondary education, from structured content to courses fully taught </div>
-							</div>
-						</div>
-						<!-- Service Block End -->
-
-						<!-- Service Block -->
-						<div class="service-block col-lg-4 col-md-4 col-sm-12">
-							<div class="inner-box wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
-								<div class="border-layer"></div>
-								<div class="icon-box">
-									<div class="icon flaticon-like"></div>
-								</div>
-								<h4><a href="course-detail.html">Flexible courses</a></h4>
-								<div class="text">We provide online learning solutions for secondary education, from structured content to courses fully taught </div>
-							</div>
-						</div>
-						<!-- Service Block End -->
-						
+						{% endfor %}
 					</div>
 				</div>
 			</div>

@@ -1,24 +1,26 @@
+{% load static %}
 <!-- Banner Section -->
 <section class="banner-section">
 	<div class="auto-container">
-		<div class="pattern-layer-six" style="background-image: url(images/main-slider/pattern-4.png)"></div>
-		<div class="pattern-layer-seven" style="background-image: url(images/main-slider/pattern-5.png)"></div>
-		<div class="pattern-layer-eight" style="background-image: url(images/main-slider/icon-2.png)"></div>
+		<div class="pattern-layer-six" style="background-image: url(static/images/main-slider/pattern-4.png)"></div>
+		<div class="pattern-layer-seven" style="background-image: url(static/images/main-slider/pattern-5.png)"></div>
+		<div class="pattern-layer-eight" style="background-image: url(static/images/main-slider/icon-2.png)"></div>
 		<div class="row clearfix">
 		
 			<!-- Image Column -->
 			<div class="image-column col-lg-6 col-md-12 col-sm-12">
 				<div class="inner-column">
-					<div class="pattern-layer-one" style="background-image: url(images/main-slider/pattern-1.png)"></div>
-					<div class="pattern-layer-two" style="background-image: url(images/main-slider/pattern-2.png)"></div>
-					<div class="pattern-layer-three" style="background-image: url(images/main-slider/icon-1.png)"></div>
-					<div class="pattern-layer-four" style="background-image: url(images/main-slider/pattern-3.png)"></div>
-					<div class="pattern-layer-five" style="background-image: url(images/main-slider/icon-2.png)"></div>
+					<div class="pattern-layer-one" style="background-image: url(static/images/main-slider/pattern-1.png)"></div>
+					<div class="pattern-layer-two" style="background-image: url(static/images/main-slider/pattern-2.png)"></div>
+					<div class="pattern-layer-three" style="background-image: url(static/images/main-slider/icon-1.png)"></div>
+					<div class="pattern-layer-four" style="background-image: url(static/images/main-slider/pattern-3.png)"></div>
+					<div class="pattern-layer-five" style="background-image: url(static/images/main-slider/icon-2.png)"></div>
 					<div class="image">
-						<img src="images/main-slider/image-1.png" alt="" />
+						<img src="{{setting.banner_big_photo.url}}" width="600px" alt="" />
+						
 					</div>
 					<div class="image-two">
-						<img src="images/main-slider/image-4.png" alt="" />
+						<img src="{{setting.banner_small_photo.url}}" width="300px" alt="" />
 					</div>
 				</div>
 			</div>
@@ -26,12 +28,12 @@
 			<!-- Content Column -->
 			<div class="content-column col-lg-6 col-md-12 col-sm-12">
 				<div class="inner-column">
-					<div class="title">Создаем светлое будущее</div>
-					<h1>Академия инновации <br>и лидерства</h1>
-					<div class="title_desc">Мы поощряем стремление учащихся школы «Академия инновации и лидерства» ставить перед собой сложные вопросы, выходить за пределы дисциплинарных границ и оспаривать традиционные способы мышления. Изучите наш сайт, чтобы найти подробную информацию о наших принципах.</div>
+					<div class="title">{{setting.banner_title}}</div>
+					<h1>{{setting.banner_big_title}}</h1>
+					<div class="title_desc">{{setting.banner_desc}}</div>
 					<div class="btns-box">
 						<a href="about.html" class="theme-btn btn-style-one">
-							<span class="txt">Записаться на курс</span>
+							<span class="txt">{{setting.banner_button}}</span>
 						</a>
 					</div>
 				</div>

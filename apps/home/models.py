@@ -13,12 +13,12 @@ class Setting(models.Model):
     email = models.CharField(verbose_name="E-mail", blank=True,max_length=155, null=True)
     time_work = models.CharField(verbose_name="Время работы", blank=True,max_length=255, null=True)
 
-    banner_big_photo = models.ImageField(verbose_name="Логотип сайта", upload_to="banner/", blank=True, null=True)
-    banner_small_photo = models.ImageField(verbose_name="Логотип сайта", upload_to="banner/", blank=True, null=True)
-    banner_title = models.CharField(max_length=150, verbose_name="Название сайта", null=True)
-    banner_big_title = models.CharField(max_length=150, verbose_name="Название сайта", null=True)
-    banner_desc = models.CharField(max_length=150, verbose_name="Название сайта", null=True)
-    banner_button = models.CharField(max_length=150, verbose_name="Название сайта", null=True)
+    banner_big_photo = models.ImageField(verbose_name="Главный баннер на сайте", upload_to="banner/", blank=True, null=True)
+    banner_small_photo = models.ImageField(verbose_name="Маленький баннер на сайте", upload_to="banner/", blank=True, null=True)
+    banner_title = models.CharField(max_length=150, verbose_name="Баннер большой заголовок", blank=True, null=True)
+    banner_big_title = models.CharField(max_length=150, verbose_name="Баннер мини заголовок", blank=True, null=True)
+    banner_desc = models.TextField(verbose_name="Баннер большой Описание", blank=True, null=True)
+    banner_button = models.CharField(max_length=150, verbose_name="Баннер кнопка название", blank=True, null=True)
 
 
     instagram = models.CharField(blank=True,max_length=255, verbose_name="Ссылка на Instagram", null=True)

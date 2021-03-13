@@ -10,5 +10,9 @@ class Teacher(models.Model):
     image = models.ImageField(verbose_name="Фото", blank=True, null=True, upload_to="teacher/")
     descrip = models.TextField(verbose_name="Описание того кто он(а) и что закончил(а)", blank=True, null=True)
 
+    def __str__(self):
+        return self.name
+    
+
     class Meta:
         verbose_name_plural = "Преподы"
