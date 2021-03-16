@@ -14,28 +14,28 @@
 			<!-- Page Breadcrumb -->
 			<ul class="page-breadcrumb">
 				<li><a href="{% url 'home' %}">Главная</a></li>
-				<li>О нас</li>
+				<li>Галерея</li>
 			</ul>
 			<div class="content-box">
-				<h2>О нас</h2>
+				<h2>Галерея</h2>
 			</div>
 		</div>
 	</section>
 	<!-- End  Banner Section -->
-    
+
     <!--  Page Section -->
-	<section class="contact-page-section">
-		<div class="pattern-layer-three" style="background-image: url(static/images/icons/icon-8.png)"></div>
+    <section class="contact-page-section">
 		<div class="auto-container">
 			<div class="row clearfix">
 				
-				<!-- Info Column -->
-				<div class="info-column col-lg-12 col-md-12 col-12 text-center">
+				{% for gal in gallery %}
+				<div class="info-column col-lg-4 col-md-4 col-6">
 					<div class="inner-column">
-						<h2>{{setting.vacancie}}</h2>
+						<img src="{{gal.image.url}}" alt="">
 					</div>
 				</div>
-
+				{% endfor %}
+				
 			</div>
 		</div>
 	</section>

@@ -11,7 +11,6 @@
 			<div class="icon-layer-two" style="background-image:url(static/images/icons/icon-2.png)"></div>
 			<div class="icon-layer-three" style="background-image:url(static/images/icons/icon-2.png)"></div>
 
-
 			<!-- Row -->
 			<div class="row clearfix">
 				{% for new in news %}
@@ -19,7 +18,9 @@
 				<div class="course-block style-two col-lg-3 col-md-4 col-6">
 					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div class="image">
-							<a href="course-detail.html"><img src="{{new.image.url}}" alt="" /></a>
+							<a href="course-detail.html">
+								<img src="{{new.image.url}}" style="height: 200px; object-fit: cover;" />
+							</a>
 						</div>
 						<div class="lower-content">
 							<div class="uni-name">{{new.sub_title}}</div>
@@ -30,7 +31,6 @@
 				{% endfor %}
 			</div>
 			<!-- Row -->
-
 
 		</div>
 	</div>

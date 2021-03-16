@@ -2073,7 +2073,7 @@ img{
 	position:relative;
 	overflow:hidden;
 	padding-top:30px;
-	padding-bottom:130px;
+	padding-bottom:70px;
 }
 
 .banner-section .image-column .pattern-layer-one{
@@ -2201,8 +2201,8 @@ img{
 
 .banner-section .image-column .image-two{
 	position:absolute;
-	left:-10px;
-	bottom:-80px;
+	left:5px;
+	bottom:-90px;
 	z-index:2;
 	transition: all 900ms ease;
     -moz-transition: all 900ms ease;
@@ -2248,7 +2248,7 @@ img{
 .banner-section .content-column .inner-column{
 	position:relative;
 	margin-left:-60px;
-	padding-top:120px;
+	padding-top:33px;
 }
 
 .banner-section .content-column .title{
@@ -2949,7 +2949,7 @@ img{
 .course-block .inner-box .image{
 	position:relative;
 	overflow:hidden;
-	background-color:#43b97e;
+	background-color:#fff;
 }
 
 .course-block .inner-box .image img{
@@ -6252,7 +6252,7 @@ img{
 .team-section-two{
 	position:relative;
 	overflow:hidden;
-	padding:120px 0px 80px;
+	padding:60px 0px 80px;
 	background-color:#f3fbf7;
 }
 
@@ -8767,7 +8767,7 @@ img{
 	position:relative;
 	width:34px;
 	height:34px;
-	color:#;
+	color: #f7832a;
 	line-height:32px;
 	text-align:center;
 	border-radius:50px;
@@ -9088,7 +9088,7 @@ img{
 
 .blog-page-section{
 	position:relative;
-	padding-top:0px;
+	padding-top:150px;
 	padding-bottom:0px;
 	background-color:#f3fef9;
 }
@@ -10103,7 +10103,7 @@ img{
 .contact-banner-section{
 	position:relative;
 	padding-top:0px;
-	padding-bottom:100px;
+	padding-bottom:60px;
 	background-color:#f3fef9;
 }
 
@@ -10195,7 +10195,6 @@ img{
 	line-height:1.4em;
 	color:#000000;
 	font-size:36px;
-	margin-top:15px;
 }
 
 /*** 

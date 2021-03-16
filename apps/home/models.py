@@ -8,6 +8,7 @@ class Setting(models.Model):
     description = models.CharField(max_length=255, verbose_name="Описание сайта", blank=True, null=True)
 
     address = models.CharField(verbose_name="Адрес", max_length=255, blank=True, null=True)
+    address_2 = models.CharField(verbose_name="Адрес 2", max_length=255, blank=True, null=True)
     phone_1 = models.CharField(verbose_name="Номер 1го телефона", max_length=13, blank=True, null=True)
     phone_2 = models.CharField(verbose_name="Номер 2го телефона", blank=True,max_length=13, null=True)
     email = models.CharField(verbose_name="E-mail", blank=True,max_length=155, null=True)
@@ -24,6 +25,9 @@ class Setting(models.Model):
     instagram = models.CharField(blank=True,max_length=255, verbose_name="Ссылка на Instagram", null=True)
     whatsapp = models.CharField(blank=True, max_length=13, verbose_name="WhatsApp номер", null=True)
     facebook = models.CharField(blank=True,max_length=255, verbose_name="Ссылка на Facebook", null=True)
+
+    vacancie = models.TextField(verbose_name="Вакансии", blank=True, null=True)
+    usloviya = models.TextField(verbose_name="Условия приема", blank=True, null=True)
 
     def __str__(self):
         return self.title

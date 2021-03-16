@@ -36,35 +36,44 @@
                                     <div class="upper-box">
                                         <div class="page-links-box">
                                             {% for cat_r in cat_cour %}
-                                            <a href="course.html" class="link">
-                                                <span class="icon flaticon-bullhorn"></span>{{cat_r.title}}
-                                            </a>
+                                                <a href="#" class="link">
+                                                    <!-- <span class="icon flaticon-bullhorn"></span> -->
+                                                    <img src="{{cat_r.icon.url}}" width="40px" alt="">
+                                                    {{cat_r.title}}
+                                                </a>
                                             {% endfor %}
                                         </div>
                                     </div>
                                     <!-- Lower Box -->
                                 </div>
                             </li>
-                            <li class="current"><a href="index.html"><span data-hover="Home">Главная</span></a></li>
+                            <li class="current"><a href="{% url 'home' %}"><span data-hover="Home">Главная</span></a></li>
                             <li class="dropdown"><a href="#">О нас</a>
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="teacher.html">Teacher</a></li>
-                                    <li><a href="membership.html">Membership</a></li>
-                                    <li><a href="faq.html">Faq</a></li>
+                                    <li><a href="{% url 'about' %}">О нас</a></li>
+                                    <li><a href="{% url 'teacher' %}">Преподаватели</a></li>
+                                    <li><a href="{% url 'gallery' %}">Галерея</a></li>
+                                    <li><a href="{% url 'partner' %}">Партнёры</a></li>
+                                    <li><a href="{% url 'vacancie' %}">Вакансии</a></li>
                                 </ul>
                             </li>
+                            <li><a href="{% url 'usloviya' %}">Условия приёма</a></li>
                             <li class="dropdown"><a href="#">Курсы</a>
                                 <ul>
                                 {% for cat_cources in cat_cour %}
-                                    <li><a href="course.html">{{cat_cources.title}}</a></li>
+                                    <li><a href="#">{{cat_cources.title}}</a></li>
                                 {% endfor %}
                                 </ul>
                             </li>
-                            <li><a href="#">Условия приёма</a></li>
-                            <li><a href="contact.html">Новости и События</a></li>
-                            <li><a href="contact.html">Галерея</a></li>
-                            <li><a href="contact.html" style="margin-right: 12px;">Контакты</a></li>
+                            <li class="dropdown"><a href="#">Кружки и Клубы</a>
+                                <ul>
+                                {% for cl in club %}
+                                    <li><a href="#">{{cl.title}}</a></li>
+                                {% endfor %}
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'news' %}">Новости</a></li>
+                            <li><a href="{% url 'contact' %}" style="margin-right: 12px;">Контакты</a></li>
                             
                         </ul>
                     </div>
