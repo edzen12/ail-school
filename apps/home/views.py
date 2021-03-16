@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from apps.home.models import Setting
 from apps.cources.models import CategoryCourses
@@ -46,10 +46,12 @@ class TeacherView(ListView):
         setting = Setting.objects.get(pk=1)
         teacher = Teacher.objects.all()
         cat_cour = CategoryCourses.objects.all()
+        club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
-            'teacher': teacher
+            'teacher': teacher,
+            'club': club
         }
         return context
 
@@ -62,10 +64,12 @@ class NewsView(ListView):
         setting = Setting.objects.get(pk=1)
         news = News.objects.all()
         cat_cour = CategoryCourses.objects.all()
+        club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
-            'news': news
+            'news': news,
+            'club': club
         }
         return context
 
@@ -78,25 +82,11 @@ class GalleryView(ListView):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
         gallery = Gallery.objects.all()
-        context = {
-            'setting': setting,
-            'cat_cour': cat_cour, 
-            'gallery': gallery
-        }
-        return context
-
-
-class ClubView(ListView):
-    queryset = Setting.objects.get(pk=1)
-    template_name = "pages/club.html"
-
-    def get_context_data(self, **kwargs):
-        setting = Setting.objects.get(pk=1)
-        cat_cour = CategoryCourses.objects.all()
         club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
+            'gallery': gallery,
             'club': club
         }
         return context
@@ -110,10 +100,12 @@ class PartnerView(ListView):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
         partners = Partners.objects.all()
+        club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
-            'partners': partners
+            'partners': partners,
+            'club': club
         }
         return context
 
@@ -125,9 +117,11 @@ class VacancieView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
+        club = Club.objects.all()
         context = {
             'setting': setting,
-            'cat_cour': cat_cour
+            'cat_cour': cat_cour,
+            'club': club
         }
         return context
 
@@ -139,9 +133,11 @@ class UsloviyaView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
+        club = Club.objects.all()
         context = {
             'setting': setting,
-            'cat_cour': cat_cour
+            'cat_cour': cat_cour,
+            'club': club
         }
         return context
 
@@ -153,9 +149,11 @@ class AboutView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
+        club = Club.objects.all()
         context = {
             'setting': setting,
-            'cat_cour': cat_cour
+            'cat_cour': cat_cour,
+            'club': club
         }
         return context
 
@@ -167,10 +165,10 @@ class ContactView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
+        club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
+            'club': club
         }
         return context
-
-

@@ -11,6 +11,6 @@ urlpatterns = [
     path('partner/', views.PartnerView.as_view(), name="partner"),
     path('vacancie/', views.VacancieView.as_view(), name="vacancie"),
     path('usloviya/', views.UsloviyaView.as_view(), name="usloviya"),
-    path('club/', views.ClubView.as_view(), name="club"),
     path('about/', views.AboutView.as_view(), name="about"),
+
 ]
