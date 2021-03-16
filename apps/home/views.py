@@ -53,6 +53,21 @@ class TeacherView(ListView):
         return context
 
 
+class TeacherDetailView(View):
+    def get(self, request, slug):
+        teacher = Teacher.objects.get(slug=slug)
+        setting = Setting.objects.get(pk=1)
+        cat_cour = CategoryCourses.objects.all()
+        teacher_all = Teacher.objects.all().order_by('-id')[:5]
+        context = {
+            'teacher': teacher,
+            'setting': setting,
+            'cat_cour': cat_cour,
+            'teacher_all': teacher_all
+        }
+        return render(request, "page_detail/teacher_detail.html", context)
+
+
 class NewsView(ListView):
     queryset = Setting.objects.get(pk=1)
     template_name = "pages/news.html"

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Teacher(models.Model):
@@ -9,6 +10,10 @@ class Teacher(models.Model):
     )
     image = models.ImageField(verbose_name="Фото", blank=True, null=True, upload_to="teacher/")
     descrip = models.TextField(verbose_name="Описание того кто он(а) и что закончил(а)", blank=True, null=True)
+    slug = models.SlugField(blank=True, null=True)
+
+    def get_absolute_url(self):
+        return reverse("teacher_detail", kwargs={"slug": self.slug})
 
     def __str__(self):
         return self.name

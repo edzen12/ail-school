@@ -14,40 +14,31 @@
 			<!-- Page Breadcrumb -->
 			<ul class="page-breadcrumb">
 				<li><a href="{% url 'home' %}">Главная</a></li>
-				<li>Преподаватели</li>
+				<li>Кружки и Клубы</li>
 			</ul>
 			<div class="content-box">
-				<h2>Преподаватели</h2>
+				<h2>Кружки и Клубы</h2>
 			</div>
 		</div>
 	</section>
 	<!-- End  Banner Section -->
 
     <!--  Page Section -->
-	<section class="team-section-two">
+    <section class="contact-page-section">
 		<div class="auto-container">
-			<div class="inner-container">
-				<div class="color-layer"></div>
-				<div class="row clearfix">
-					
-					{% for tea in teacher %}
-					<div class="team-block col-lg-4 col-md-6 col-sm-12">
-						<div class="inner-box">
-							<div class="image">
-								<a href="{{tea.get_absolute_url}}">
-									<img src="{{tea.image.url}}" 
-                                    style="height: 270px;object-fit: cover;"/>
-                                </a>
-							</div>
-							<div class="lower-content">
-								<h5><a href="{{tea.get_absolute_url}}">{{tea.name}}</a></h5>
-								<div class="designation">- {{tea.sub_title}}</div>
-							</div>
-						</div>
+			<div class="row clearfix">
+				
+				{% for cl in club %}
+				<div class="info-column col-lg-4 col-md-4 col-6">
+					<div class="inner-column">
+						<a href="{{cl.get_absolute_url}}">
+							<img src="{{cl.image.url}}">
+						</a>
 					</div>
-					{% endfor %}
-
+                    <a href="{{cl.get_absolute_url}}"><h4 class="mt-2">{{cl.title}}</h4></a>
 				</div>
+				{% endfor %}
+				
 			</div>
 		</div>
 	</section>
