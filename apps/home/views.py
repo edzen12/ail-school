@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
+from django.views.generic.base import View
 
 from apps.home.models import Setting
 from apps.cources.models import CategoryCourses
@@ -24,7 +25,6 @@ class HomeView(ListView):
         partners = Partners.objects.all()
         teacher = Teacher.objects.all().order_by('-id')[:6]
         news = News.objects.all().order_by('-id')[:3]
-        club = Club.objects.all()
         context = {
             'setting': setting,
             'testimonial': testimonial,
@@ -32,8 +32,7 @@ class HomeView(ListView):
             'cat_cour': cat_cour, 
             'partners': partners,
             'teacher':teacher,
-            'news': news, 
-            'club': club,
+            'news': news,
         }
         return context
 
@@ -46,12 +45,10 @@ class TeacherView(ListView):
         setting = Setting.objects.get(pk=1)
         teacher = Teacher.objects.all()
         cat_cour = CategoryCourses.objects.all()
-        club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
-            'teacher': teacher,
-            'club': club
+            'teacher': teacher
         }
         return context
 
@@ -64,14 +61,27 @@ class NewsView(ListView):
         setting = Setting.objects.get(pk=1)
         news = News.objects.all()
         cat_cour = CategoryCourses.objects.all()
-        club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
-            'news': news,
-            'club': club
+            'news': news
         }
         return context
+
+
+class NewsDetailView(View):
+    def get(self, request, slug):
+        news = News.objects.get(slug=slug)
+        setting = Setting.objects.get(pk=1)
+        cat_cour = CategoryCourses.objects.all()
+        news_all = News.objects.all().order_by('-id')[:5]
+        context = {
+            'news': news,
+            'setting': setting,
+            'cat_cour': cat_cour,
+            'news_all': news_all
+        }
+        return render(request, "page_detail/news_detail.html", context)
 
 
 class GalleryView(ListView):
@@ -82,12 +92,10 @@ class GalleryView(ListView):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
         gallery = Gallery.objects.all()
-        club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
-            'gallery': gallery,
-            'club': club
+            'gallery': gallery
         }
         return context
 
@@ -100,12 +108,10 @@ class PartnerView(ListView):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
         partners = Partners.objects.all()
-        club = Club.objects.all()
         context = {
             'setting': setting,
             'cat_cour': cat_cour, 
-            'partners': partners,
-            'club': club
+            'partners': partners
         }
         return context
 
@@ -117,11 +123,9 @@ class VacancieView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
-        club = Club.objects.all()
         context = {
             'setting': setting,
-            'cat_cour': cat_cour,
-            'club': club
+            'cat_cour': cat_cour
         }
         return context
 
@@ -133,11 +137,9 @@ class UsloviyaView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
-        club = Club.objects.all()
         context = {
             'setting': setting,
-            'cat_cour': cat_cour,
-            'club': club
+            'cat_cour': cat_cour
         }
         return context
 
@@ -149,6 +151,20 @@ class AboutView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
+        context = {
+            'setting': setting,
+            'cat_cour': cat_cour
+        }
+        return context
+
+
+class ClubView(ListView):
+    queryset = Setting.objects.get(pk=1)
+    template_name = "pages/club.html"
+
+    def get_context_data(self, **kwargs):
+        setting = Setting.objects.get(pk=1)
+        cat_cour = CategoryCourses.objects.all()
         club = Club.objects.all()
         context = {
             'setting': setting,
@@ -158,6 +174,21 @@ class AboutView(ListView):
         return context
 
 
+class ClubDetailView(View):
+    def get(self, request, slug):
+        club = Club.objects.get(slug=slug)
+        club_all = Club.objects.all().order_by('-id')[:5]
+        setting = Setting.objects.get(pk=1)
+        cat_cour = CategoryCourses.objects.all()
+        context = {
+            'club': club,
+            'setting': setting,
+            'cat_cour': cat_cour,
+            'club_all': club_all
+        }
+        return render(request, "page_detail/club_detail.html", context)
+
+
 class ContactView(ListView):
     queryset = Setting.objects.get(pk=1)
     template_name = "pages/contact.html"
@@ -165,10 +196,8 @@ class ContactView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
-        club = Club.objects.all()
         context = {
             'setting': setting,
-            'cat_cour': cat_cour, 
-            'club': club
+            'cat_cour': cat_cour
         }
         return context

@@ -9317,12 +9317,12 @@ img{
 }
 
 .sidebar .popular-posts .post .post-thumb{
-	 position:absolute;
-	 left:0px;
-	 top:0px;
-	 width:70px;
-	 border-radius:50%;
-	overflow:hidden;
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 80px;
+    border-radius: 10%;
+    overflow: hidden;
 }
 
 .sidebar .popular-posts .post .post-thumb .overlay-box{

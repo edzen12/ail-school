@@ -14,44 +14,32 @@
 			<!-- Page Breadcrumb -->
 			<ul class="page-breadcrumb">
 				<li><a href="{% url 'home' %}">Главная</a></li>
-				<li>Новости</li>
+				<li>Кружки и Клубы</li>
 			</ul>
 			<div class="content-box">
-				<h2>Новости</h2>
+				<h2>Кружки и Клубы</h2>
 			</div>
 		</div>
 	</section>
 	<!-- End  Banner Section -->
 
     <!--  Page Section -->
-    <section class="blog-page-section">
-		<div class="outer-container">
+    <section class="contact-page-section">
+		<div class="auto-container">
 			<div class="row clearfix">
 				
-				{% for n in news %}
-				<div class="news-block style-two col-lg-4 col-md-4 col-12">
-					<div class="inner-box">
-						<div class="image">
-							<img src="{{n.image.url}}" style="height:210px; object-fit:cover" />
-						</div>
-						<div >
-							<div class="border-layer"></div>
-							<ul class="post-info">
-								<li>{{n.sub_title}}</li>
-								<li>{{n.created_at}}</li>
-							</ul>
-							<h4><a href="{{n.get_absolute_url}}">{{n.title}}</a></h4>
-							<a href="{{n.get_absolute_url}}" class="more">
-								Подробнее 
-								<span class="fa fa-angle-double-right"></span>
-							</a>
-						</div>
+				{% for cl in club %}
+				<div class="info-column col-lg-4 col-md-4 col-6">
+					<div class="inner-column">
+						<a href="{{cl.get_absolute_url}}">
+							<img src="{{cl.image.url}}">
+						</a>
 					</div>
+                    <a href="{{cl.get_absolute_url}}"><h4 class="mt-2">{{cl.title}}</h4></a>
 				</div>
 				{% endfor %}
-
+				
 			</div>
-			
 		</div>
 	</section>
 	<!-- End Page Section -->
@@ -61,3 +49,5 @@
 {% block footer %}
 	{% include 'footer.html' %}
 {% endblock footer %}
+
+

@@ -65,13 +65,7 @@
                                 {% endfor %}
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="#">Кружки и Клубы</a>
-                                <ul>
-                                {% for cl in club %}
-                                    <li><a href="#">{{cl.title}}</a></li>
-                                {% endfor %}
-                                </ul>
-                            </li>
+                            <li><a href="{% url 'club' %}">Кружки и Клубы</a></li>
                             <li><a href="{% url 'news' %}">Новости</a></li>
                             <li><a href="{% url 'contact' %}" style="margin-right: 12px;">Контакты</a></li>
                             

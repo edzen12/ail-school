@@ -1,0 +1,77 @@
+{% extends 'homebase.html' %}
+
+{% block header %}
+	{% include 'header.html' %}
+{% endblock header %}
+
+{% block body %}
+
+	<!--  Banner Section -->
+    <section class="contact-banner-section">
+		<div class="pattern-layer-one" style="background-color:#f7832a"></div>
+		<div class="pattern-layer-two" style="background-color:#f24848"></div>
+		<div class="auto-container">
+			<!-- Page Breadcrumb -->
+			<ul class="page-breadcrumb">
+				<li><a href="{% url 'home' %}">Главная</a></li>
+				<li>Кружки и Клубы</li>
+			</ul>
+			<div class="content-box">
+				<h2>{{news.title}}</h2>
+			</div>
+		</div>
+	</section>
+	<!-- End  Banner Section -->
+    <div class="sidebar-page-container style-two">
+        <div class="auto-container">
+            <div class="row clearfix">
+                
+                <!-- Content Side -->
+                <div class="content-side col-lg-9 col-md-12 col-sm-12">
+                    <div class="blog-detail">
+                        <div class="inner-box">
+                            <img src="{{news.image.url}}" class="img-thumbnail">
+                            <p>{{news.descrip|safe}}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar Side -->
+                <div class="sidebar-side col-lg-3 col-md-12 col-sm-12">
+                    <aside class="sidebar sticky-top">
+                        
+                        <!-- Popular Post Widget -->
+                        <div class="sidebar-widget popular-posts">
+                            <div class="sidebar-title">
+                                <h5>Другие Кружки и Клубы</h5>
+                            </div>
+                            <div class="widget-content">
+                                {% for all in news_all %}
+                                <article class="post">
+                                    <figure class="post-thumb">
+                                        <img src="{{all.image.url}}" alt="">
+                                        <a href="{{all.get_absolute_url}}" class="overlay-box">
+                                            <span class="icon fa fa-link"></span>
+                                        </a>
+                                    </figure>
+                                    <div class="text">
+                                        <a href="{{all.get_absolute_url}}">{{all.title}}</a>
+                                    </div>
+                                    <div class="post-info">{{all.descrip|truncatewords:5|safe}}</div>
+                                </article>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                    </aside>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
+
+{% block footer %}
+	{% include 'footer.html' %}
+{% endblock footer %}
