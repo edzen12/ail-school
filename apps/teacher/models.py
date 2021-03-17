@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+from ckeditor_uploader.fields import RichTextUploadingField
+
 
 
 class Teacher(models.Model):
@@ -9,7 +11,7 @@ class Teacher(models.Model):
         help_text="Пример: Учитель по программированию, Робототехнике, Английскому и т.д."
     )
     image = models.ImageField(verbose_name="Фото", blank=True, null=True, upload_to="teacher/")
-    descrip = models.TextField(verbose_name="Описание того кто он(а) и что закончил(а)", blank=True, null=True)
+    descrip = RichTextUploadingField(verbose_name="Описание того кто он(а) и что закончил(а)", blank=True, null=True)
     slug = models.SlugField(blank=True, null=True)
 
     def get_absolute_url(self):

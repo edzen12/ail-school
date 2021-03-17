@@ -14,10 +14,10 @@
 			<!-- Page Breadcrumb -->
 			<ul class="page-breadcrumb">
 				<li><a href="{% url 'home' %}">Главная</a></li>
-				<li>Кружки и Клубы</li>
+				<li>Курсы</li>
 			</ul>
 			<div class="content-box">
-				<h2>Кружки и Клубы</h2>
+				<h2>Курсы</h2>
 			</div>
 		</div>
 	</section>
@@ -28,16 +28,16 @@
 		<div class="auto-container">
 			<div class="row clearfix">
 				
-				{% for cl in club %}
+				{% comment %} {% for cl in cat_cources %} {% endcomment %}
 				<div class="info-column col-lg-4 col-md-4 col-6">
 					<div class="inner-column">
-						<a href="{{cl.get_absolute_url}}">
-							<img src="{{cl.image.url}}">
+						<a href="{{cat_cources.get_absolute_url}}">
+							<img src="{{cat_cources.image.url}}">
 						</a>
 					</div>
-                    <a href="{{cl.get_absolute_url}}"><h4 class="mt-2">{{cl.title}}</h4></a>
+                    <a href="{{cat_cources.get_absolute_url}}"><h4 class="mt-2">{{cat_cources.title}}</h4></a>
 				</div>
-				{% endfor %}
+				{% comment %} {% endfor %} {% endcomment %}
 				
 			</div>
 		</div>

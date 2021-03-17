@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Setting(models.Model):
@@ -26,8 +27,8 @@ class Setting(models.Model):
     whatsapp = models.CharField(blank=True, max_length=13, verbose_name="WhatsApp номер", null=True)
     facebook = models.CharField(blank=True,max_length=255, verbose_name="Ссылка на Facebook", null=True)
 
-    vacancie = models.TextField(verbose_name="Вакансии", blank=True, null=True)
-    usloviya = models.TextField(verbose_name="Условия приема", blank=True, null=True)
+    vacancie = RichTextUploadingField(verbose_name="Вакансии", blank=True, null=True)
+    usloviya = RichTextUploadingField(verbose_name="Условия приема", blank=True, null=True)
 
     def __str__(self):
         return self.title

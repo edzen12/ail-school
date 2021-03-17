@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+from ckeditor_uploader.fields import RichTextUploadingField
+
 
 
 class News(models.Model):
@@ -9,7 +11,7 @@ class News(models.Model):
         help_text="Пример: Образование, Курсы, Технологии и т.д."
     )
     image = models.ImageField(verbose_name="Фото", blank=True, null=True, upload_to="news/")
-    descrip = models.TextField(verbose_name="Описание", blank=True, null=True)
+    descrip = RichTextUploadingField(verbose_name="Описание", blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(blank=True, null=True)
 
