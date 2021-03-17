@@ -23,8 +23,8 @@
 							</a>
 						</div>
 						<div class="lower-content">
-							<div class="uni-name">{{new.sub_title}}</div>
-							<h4><a href="course-detail.html">{{new.title}}</a></h4>
+							<div class="uni-name">{{new.sub_title|truncatewords:9|safe}}</div>
+							<h4><a href="course-detail.html">{{new.title|truncatewords:7|safe}}</a></h4>
 						</div>
 					</div>
 				</div>

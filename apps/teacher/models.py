@@ -7,7 +7,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Teacher(models.Model):
     name = models.CharField(verbose_name="Имя Фамилие", max_length=100)
     sub_title = models.CharField(
-        verbose_name="Предмет", max_length=50, blank=True, null=True, 
+        verbose_name="Предмет", max_length=100, blank=True, null=True, 
         help_text="Пример: Учитель по программированию, Робототехнике, Английскому и т.д."
     )
     image = models.ImageField(verbose_name="Фото", blank=True, null=True, upload_to="teacher/")

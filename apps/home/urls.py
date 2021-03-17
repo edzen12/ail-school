@@ -22,4 +22,7 @@ urlpatterns = [
     path('cluby-krujki/', views.ClubView.as_view(), name="club"),
     path('cluby-krujki/<slug:slug>/', views.ClubDetailView.as_view(), name="club_detail"),
 
+    path('policy/', views.policy, name="policy"),
+
+
 ]

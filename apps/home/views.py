@@ -235,5 +235,12 @@ class CourcesDetailView(View):
 
 
 
-    
+def policy(request):
+    setting = Setting.objects.get(pk=1)
+    cat_cour = CategoryCourses.objects.all()
+    context = {
+        'setting': setting,
+        'cat_cour': cat_cour,
+    }
+    return render(request, 'privacy_policy.html', context)
     
