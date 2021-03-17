@@ -36,7 +36,7 @@
                                     <div class="upper-box">
                                         <div class="page-links-box">
                                             {% for cat_r in cat_cour %}
-                                                <a href="#" class="link">
+                                                <a href="{{cat_r.get_absolute_url}}" class="link">
                                                     <!-- <span class="icon flaticon-bullhorn"></span> -->
                                                     <img src="{{cat_r.icon.url}}" width="40px" alt="">
                                                     {{cat_r.title}}
@@ -61,7 +61,11 @@
                             <li class="dropdown"><a href="#">Курсы</a>
                                 <ul>
                                 {% for cat_cources in cat_cour %}
-                                    <li><a href="#">{{cat_cources.title}}</a></li>
+                                    <li>
+                                        <a href="{{cat_cources.get_absolute_url}}">
+                                            {{cat_cources.title}}
+                                        </a>
+                                    </li>
                                 {% endfor %}
                                 </ul>
                             </li>

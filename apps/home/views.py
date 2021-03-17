@@ -173,6 +173,20 @@ class AboutView(ListView):
         return context
 
 
+class ContactView(ListView):
+    queryset = Setting.objects.get(pk=1)
+    template_name = "pages/contact.html"
+
+    def get_context_data(self, **kwargs):
+        setting = Setting.objects.get(pk=1)
+        cat_cour = CategoryCourses.objects.all()
+        context = {
+            'setting': setting,
+            'cat_cour': cat_cour
+        }
+        return context
+
+
 class ClubView(ListView):
     queryset = Setting.objects.get(pk=1)
     template_name = "pages/club.html"
@@ -204,19 +218,22 @@ class ClubDetailView(View):
         return render(request, "page_detail/club_detail.html", context)
 
 
-class ContactView(ListView):
-    queryset = Setting.objects.get(pk=1)
-    template_name = "pages/contact.html"
 
-    def get_context_data(self, **kwargs):
+class CourcesDetailView(View):
+    def get(self, request, slug):
+        cources = CategoryCourses.objects.get(slug=slug)
+        cources_all = CategoryCourses.objects.all().order_by('-id')[:5]
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
         context = {
+            'cources': cources,
             'setting': setting,
-            'cat_cour': cat_cour
+            'cat_cour': cat_cour,
+            'cources_all': cources_all
         }
-        return context
+        return render(request, "page_detail/cources_detail.html", context)
 
 
 
-
+    
+    
