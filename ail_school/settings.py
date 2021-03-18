@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'apps.preimushestva',
     'apps.teacher',
     'apps.testimonial',
+    'apps.vacancie',
 ]
 
 MIDDLEWARE = [

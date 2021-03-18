@@ -1,0 +1,36 @@
+{% extends 'homebase.html' %}
+
+{% block header %}
+	{% include 'header.html' %}
+{% endblock header %}
+
+{% block body %}
+
+    <!--  Banner Section -->
+    <section class="contact-banner-section">
+        <div class="auto-container">
+            <!-- Page Breadcrumb -->
+            <ul class="page-breadcrumb">
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li>Политика и Положение</li>
+            </ul>
+            <div class="content-box">
+                <h2>Политика и Положение</h2>
+            </div>
+        </div>
+    </section>
+    <!-- End  Banner Section -->
+
+<section class="contact-page-section">
+	<div class="pattern-layer-three" style="background-image: url(images/icons/icon-8.png)"></div>
+		<div class="auto-container">
+            <p>{{setting.politic_polojeniya}}</p>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}
+
+{% block footer %}
+	{% include 'footer.html' %}
+{% endblock footer %}

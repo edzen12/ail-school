@@ -23,6 +23,7 @@ urlpatterns = [
     path('cluby-krujki/<slug:slug>/', views.ClubDetailView.as_view(), name="club_detail"),
 
     path('policy/', views.policy, name="policy"),
+    path('politic-polojeniya/', views.politic_polojeniya, name="politic_polojeniya"),
 
 
 ]
