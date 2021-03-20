@@ -11,6 +11,7 @@ from apps.teacher.models import Teacher
 from apps.gallery.models import Gallery
 from apps.club_and.models import Club
 from apps.news.models import News
+from apps.about.models import AboutUs
 
 
 class HomeView(ListView):
@@ -23,7 +24,7 @@ class HomeView(ListView):
         advantage = Advantage.objects.all().order_by('-id')[:6]
         testimonial = Testimonial.objects.all().order_by('-id')[:5]
         partners = Partners.objects.all()
-        teacher = Teacher.objects.all().order_by('-id')[:6]
+        teacher = Teacher.objects.all().order_by('-id')[:8]
         news = News.objects.all().order_by('-id')[:3]
         context = {
             'setting': setting,
@@ -165,10 +166,12 @@ class AboutView(ListView):
 
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
+        about = AboutUs.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
         context = {
             'setting': setting,
-            'cat_cour': cat_cour
+            'cat_cour': cat_cour,
+            'about': about
         }
         return context
 

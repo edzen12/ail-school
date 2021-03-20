@@ -12,7 +12,7 @@
 			<!-- Page Breadcrumb -->
 			<ul class="page-breadcrumb">
 				<li><a href="{% url 'home' %}">Главная</a></li>
-				<li>Кружки и Клубы</li>
+				<li><a href="{% url 'news' %}">Последние новости & статьи</a></li>
 			</ul>
 			<div class="content-box">
 				<h2>{{news.title}}</h2>
@@ -41,7 +41,7 @@
                         <!-- Popular Post Widget -->
                         <div class="sidebar-widget popular-posts">
                             <div class="sidebar-title">
-                                <h5>Другие Кружки и Клубы</h5>
+                                <h5>Другие новости & статьи</h5>
                             </div>
                             <div class="widget-content">
                                 {% for all in news_all %}

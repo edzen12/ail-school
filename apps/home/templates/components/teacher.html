@@ -18,10 +18,13 @@
 					<div class="inner-box">
 						<div class="author-info">
 							<div class="author-image">
-								<img src="{{teach.image.url}}" style="border-radius: 15px; height:220px; object-fit: cover;" />
+							<a href="{{teach.get_absolute_url}}">
+								<img src="{{teach.image.url}}" style="border-radius: 15px; height:240px; object-fit: cover;" />
+							</a>
 							</div>
 							<div class="info-inner">
-								<h6>{{teach.name}}</h6>
+								<a href="{{teach.get_absolute_url}}">
+								<h6>{{teach.name}}</h6></a>
 								<div class="designation">{{teach.sub_title}}</div>
 							</div>
 						</div>

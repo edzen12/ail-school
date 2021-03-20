@@ -9,7 +9,7 @@ class Advantage(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.id} - {self.descrip}"
+        return self.descrip
 
     class Meta:
         verbose_name_plural = "Преимущества"

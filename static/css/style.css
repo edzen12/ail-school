@@ -2269,7 +2269,7 @@ img{
 .banner-section .content-column .title_desc{
 	position:relative;
 	color:#06092d;
-	font-size:12px;
+	font-size:14px;
 	line-height:1.8em;
 	margin-top:10px;
 	margin-bottom:20px;
@@ -10207,7 +10207,24 @@ img{
 
 .contact-page-section{
 	position:relative;
-	padding:110px 0px 70px;
+	padding:70px 0px 70px;
+}
+.indexRelative{
+	position:relative;
+}
+.indexRelative img{
+	position:absolute;
+	right:-100px;
+	top:65px;
+	border-radius:20px;
+}
+@media only screen and (max-width: 375px){
+	.indexRelative img {
+		position:initial;
+		right: -100px;
+		top: 65px;
+		margin-top: 200px;
+	}
 }
 
 .contact-page-section .pattern-layer-three{
@@ -10954,3 +10971,4 @@ img{
 	font-weight:500;
 	text-transform:uppercase;
 }
+

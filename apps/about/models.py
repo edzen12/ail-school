@@ -12,8 +12,6 @@ class AboutUs(models.Model):
         verbose_name="Фото 1й карточки", upload_to="about/", blank=True, null=True)
     one_medium_image = models.ImageField(
         verbose_name="Фото 1й карточки", upload_to="about/", blank=True, null=True)
-    one_small_image = models.ImageField(
-        verbose_name="Фото 1й карточки сайта", upload_to="about/", blank=True, null=True)
 
     two_big_title = models.CharField(
         verbose_name="Заголовок 2й карточки", max_length=150, blank=True, null=True)
@@ -26,15 +24,11 @@ class AboutUs(models.Model):
         verbose_name="Наша миссия", max_length=150, blank=True, null=True)
     three_big_desc = RichTextUploadingField(
         verbose_name="Описание миссии", blank=True, null=True)
-    three_big_image = models.ImageField(
-        verbose_name="Фото миссии", upload_to="about/", blank=True, null=True)
 
     four_big_title = models.CharField(
         verbose_name="Наша философия", max_length=150, blank=True, null=True)
     four_big_desc = RichTextUploadingField(
         verbose_name="Описание философии", blank=True, null=True)
-    four_big_image = models.ImageField(
-        upload_to="about/", verbose_name="Фото философии", blank=True, null=True)
 
     five_big_title = models.CharField(
         verbose_name="Заголовок 5й карточки", max_length=150, blank=True, null=True)

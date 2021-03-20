@@ -12,7 +12,7 @@
 			<!-- Page Breadcrumb -->
 			<ul class="page-breadcrumb">
 				<li><a href="{% url 'home' %}">Главная</a></li>
-				<li>Кружки и Клубы</li>
+				<li><a href="{% url 'teacher' %}">Преподаватели</a></li>
 			</ul>
 			<div class="content-box">
 				<h2>{{teacher.name}}</h2>
@@ -28,7 +28,8 @@
                 <div class="content-side col-lg-9 col-md-12 col-sm-12">
                     <div class="blog-detail">
                         <div class="inner-box">
-                            <img src="{{teacher.image.url}}" class="img-thumbnail">
+                            <img src="{{teacher.image.url}}" class="img-thumbnail"><br>
+                            <span>{{teacher.sub_title}}</span>
                             <p>{{teacher.descrip|safe}}</p>
                         </div>
                     </div>
@@ -41,7 +42,7 @@
                         <!-- Popular Post Widget -->
                         <div class="sidebar-widget popular-posts">
                             <div class="sidebar-title">
-                                <h5>Другие Кружки и Клубы</h5>
+                                <h5>Другие Преподаватели</h5>
                             </div>
                             <div class="widget-content">
                                 {% for all in teacher_all %}
