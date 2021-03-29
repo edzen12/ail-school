@@ -39,9 +39,11 @@
 				<!-- Info Column -->
 				<div class="info-column col-lg-6 col-md-6 col-12 text-center" style="margin-bottom: 60px;">
 					<div class="inner-column">
-						<div class="indexRelative" style="background: url('{{about.one_big_image.url}}') center / cover;width: 400px; height: 400px;">
-							<img src="{{about.one_medium_image.url}}" width="200px">
-						</div>
+						<a href="{% url 'gallery' %}">
+							<div class="indexRelative" style="background: url('{{about.one_big_image.url}}') center / cover;width: 400px; height: 400px;">
+								<img src="{{about.one_medium_image.url}}" width="200px">
+							</div>
+						</a>
 					</div>
 				</div>
 				<!-- End Info Column -->
@@ -49,7 +51,9 @@
 				<!-- Start Info Column -->
 				<div class="info-column col-lg-6 col-md-6 col-12 text-center">
 					<div class="inner-column">
-						<img src="{{about.two_big_image.url}}" width="400px">
+						<a href="{% url 'gallery' %}">
+							<img src="{{about.two_big_image.url}}" width="400px">
+						</a>
 					</div>
 				</div>
 				<!-- Info Column -->
@@ -87,7 +91,9 @@
 				<!-- Start Info Column -->
 				<div class="info-column col-lg-6 col-md-6 col-12 text-center">
 					<div class="inner-column">
-						<img src="{{about.five_big_image.url}}" width="500px">
+						<a href="{% url 'gallery' %}">
+							<img src="{{about.five_big_image.url}}" width="500px">
+						</a>
 					</div>
 				</div>
 				<!-- Info Column -->
@@ -111,7 +117,9 @@
 				<!-- Info Column -->
 				<div class="info-column col-lg-6 col-md-6 col-12 text-center">
 					<div class="inner-column">
-						<img src="{{about.six_big_image.url}}" width="500px">
+						<a href="{% url 'gallery' %}">
+							<img src="{{about.six_big_image.url}}" width="500px">
+						</a>
 					</div>
 				</div>
 				<!-- End Info Column -->

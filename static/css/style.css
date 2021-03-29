@@ -10104,7 +10104,8 @@ img{
 	position:relative;
 	padding-top:0px;
 	padding-bottom:60px;
-	background-color:#f3fef9;
+	background-color: #52ba7e;
+    border-radius: 20px;
 }
 
 .contact-banner-section .pattern-layer-one{
@@ -10149,7 +10150,7 @@ img{
 	position:relative;
 	padding-right:10px;
 	margin-right:10px;
-	color:#78787c;
+	color:#fafafa;
 	font-size:16px;
 	display:inline-block;
 }
@@ -10164,7 +10165,7 @@ img{
 
 .contact-banner-section .page-breadcrumb li a{
 	position:relative;
-	color:#06092d;
+	color:#fff;
 }
 
 .contact-banner-section .page-breadcrumb li:last-child{
@@ -10193,7 +10194,7 @@ img{
 	position:relative;
 	font-weight:500;
 	line-height:1.4em;
-	color:#000000;
+	color:#fff;
 	font-size:36px;
 }
 
