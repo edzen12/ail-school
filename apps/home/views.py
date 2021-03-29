@@ -12,6 +12,7 @@ from apps.gallery.models import Gallery
 from apps.club_and.models import Club
 from apps.news.models import News
 from apps.about.models import AboutUs
+from apps.vacancie.models import Vacancie
 
 
 class HomeView(ListView):
@@ -139,11 +140,28 @@ class VacancieView(ListView):
     def get_context_data(self, **kwargs):
         setting = Setting.objects.get(pk=1)
         cat_cour = CategoryCourses.objects.all()
+        vacancie = Vacancie.objects.all()
         context = {
             'setting': setting,
-            'cat_cour': cat_cour
+            'cat_cour': cat_cour,
+            'vacancie': vacancie
         }
         return context
+
+
+class VacancieDetailView(View):
+    def get(self, request, slug):
+        club = Vacancie.objects.get(slug=slug)
+        club_all = Vacancie.objects.all().order_by('-id')[:5]
+        setting = Setting.objects.get(pk=1)
+        cat_cour = CategoryCourses.objects.all()
+        context = {
+            'club': club,
+            'setting': setting,
+            'cat_cour': cat_cour,
+            'club_all': club_all
+        }
+        return render(request, "page_detail/vacancie_detail.html", context)
 
 
 class UsloviyaView(ListView):
