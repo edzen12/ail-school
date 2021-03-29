@@ -18,10 +18,17 @@
                             <a href="{% url 'home' %}"><img src="{% static 'images/logo1.png' %}" width="220px" alt="" /></a>
                         </div>
                         <ul class="info-list">
-                            <li>Tel:<a href="tel:{{setting.phone_1}}"> {{setting.phone_1}}</a></li>
-                            <li>Tel:<a href="tel:{{setting.phone_2}}"> {{setting.phone_2}}</a></li>
-                            <li>Email:<a href="mailto:{{setting.email}}"> 
+                            <li>Tel: <i class="fa fa-phone" style="font-size: 18px;"></i>
+                                <a href="tel:{{setting.phone_1}}"> {{setting.phone_1}}</a>
+                            </li>
+                            <li>Tel: <i class="fa fa-mobile-phone" style="font-size: 24px;"></i>
+                                <a href="tel:{{setting.phone_2}}"> {{setting.phone_2}}</a></li>
+                            <li>Email: <i class="fa fa-envelope"></i>
+                                <a href="mailto:{{setting.email}}"> 
                                 <span class="__cf_email__">{{setting.email}}</span></a>
+                            </li>
+                            <li>Адрес: <i class="fa fa-map-marker" style="font-size: 22px;"></i>
+                                <a href="#!"> {{setting.address}}</a>
                             </li>
                         </ul>
                         <!-- Social Box -->
@@ -76,13 +83,16 @@
                 
                 <!-- Copyright Column -->
                 <div class="copyright-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="copyright">Copyright 2020, Все права защищены</div>
+                    <div class="copyright">
+                        Copyright 2020, Все права защищены
+                    </div>
                 </div>
                 
                 <!-- Nav Column -->
                 <div class="nav-column col-lg-6 col-md-12 col-sm-12">
                     <ul>
                         <li><a href="{% url 'policy' %}">Privacy Policy</a></li>
+                        <a href="https://wa.me/+996771494083" target="_blank" style="text-transform:uppercase;">разработано командой ENIGMA</a> 
                     </ul>
                 </div>
                 

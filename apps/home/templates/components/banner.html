@@ -14,9 +14,36 @@
 					<div class="pattern-layer-two" style="background-image: url(static/images/main-slider/pattern-2.png)"></div>
 					<div class="pattern-layer-four" style="background-image: url(static/images/main-slider/pattern-3.png)"></div>
 					<div class="pattern-layer-five" style="background-image: url(static/images/main-slider/icon-2.png)"></div>
-					<div class="image">
+					<!-- <div class="image">
 						<img src="{{setting.banner_big_photo.url}}" width="600px" style="margin-top:20px" alt="" />
+					</div> -->
+					<!-- My edit Start -->
+					<div class="image" style="margin-left: 10px;">
+						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+							  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								{% for sli in slider %}
+								<div class="carousel-item {{sli.active}}">
+									<img class="d-block w-100" src="{{sli.image.url}}" alt="slide">
+								</div>
+							  	{% endfor %}
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							  <span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							  <span class="sr-only">Next</span>
+							</a>
+						  </div>
 					</div>
+					<!-- My edit End -->
+
 				</div>
 			</div>
 			

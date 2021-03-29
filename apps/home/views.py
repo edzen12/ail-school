@@ -8,7 +8,7 @@ from apps.preimushestva.models import Advantage
 from apps.testimonial.models import Testimonial
 from apps.partner.models import Partners
 from apps.teacher.models import Teacher
-from apps.gallery.models import Gallery
+from apps.gallery.models import Gallery, Slider
 from apps.club_and.models import Club
 from apps.news.models import News
 from apps.about.models import AboutUs
@@ -27,6 +27,7 @@ class HomeView(ListView):
         partners = Partners.objects.all()
         teacher = Teacher.objects.all().order_by('-id')[:8]
         news = News.objects.all().order_by('-id')[:3]
+        slider = Slider.objects.all().order_by('-id')[:3]
         context = {
             'setting': setting,
             'testimonial': testimonial,
@@ -35,6 +36,7 @@ class HomeView(ListView):
             'partners': partners,
             'teacher':teacher,
             'news': news,
+            'slider':slider,
         }
         return context
 
