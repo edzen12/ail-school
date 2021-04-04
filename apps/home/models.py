@@ -3,7 +3,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Setting(models.Model):
-    title = models.CharField(max_length=150, verbose_name="Название сайта", null=True)
+    title = models.CharField(max_length=250, verbose_name="Название сайта", null=True)
     logo = models.ImageField(verbose_name="Логотип сайта", upload_to="logo/", blank=True, null=True)
     description = models.CharField(max_length=255, verbose_name="Описание сайта", blank=True, null=True)
 
@@ -13,8 +13,8 @@ class Setting(models.Model):
     email = models.CharField(verbose_name="E-mail", blank=True,max_length=155, null=True)
     time_work = models.CharField(verbose_name="Время работы", blank=True,max_length=255, null=True)
 
-    banner_title = models.CharField(max_length=150, verbose_name="Баннер большой заголовок", blank=True, null=True)
-    banner_big_title = models.CharField(max_length=150, verbose_name="Баннер мини заголовок", blank=True, null=True)
+    banner_title = models.CharField(max_length=250, verbose_name="Баннер большой заголовок", blank=True, null=True)
+    banner_big_title = models.CharField(max_length=250, verbose_name="Баннер мини заголовок", blank=True, null=True)
     banner_desc = models.TextField(verbose_name="Баннер большой Описание", blank=True, null=True)
 
 
