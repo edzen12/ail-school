@@ -5,9 +5,9 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class News(models.Model):
-    title = models.CharField(verbose_name="Название", max_length=100)
+    title = models.CharField(verbose_name="Название", max_length=200)
     sub_title = models.CharField(
-        verbose_name="Под заголовок", max_length=100, blank=True, null=True, 
+        verbose_name="Под заголовок", max_length=200, blank=True, null=True, 
         help_text="Пример: Образование, Курсы, Технологии и т.д."
     )
     image = models.ImageField(verbose_name="Фото", blank=True, null=True, upload_to="news/")
