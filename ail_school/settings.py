@@ -13,7 +13,7 @@ SECRET_KEY = 'crwbag&y6b@fmd5tw!*daai9h1#ol0g)mkryy$8$=!&g(8)4gg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['188.225.56.54', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['ail-school.com', '127.0.0.1']
 
 
 # Application definition
